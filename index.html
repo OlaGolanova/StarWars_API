@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week20</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>__STAR WARS__ </h1>
+        <h2>Кого или что будем выбирать?</h2>
+        <div class="wrap">
+            <select name="input" id="select">
+                <option value="category" name="option" selected="true" disabled="disabled">Категория</option>
+                <option value="films" name="option" >Фильмы</option>
+                <option value="planets" name="option">Планеты</option>
+                <option value="people" name="option">Люди</option>
+                <option value="species" name="option">Раса</option>
+                <option value="starships" name="option">Звездолеты</option>
+                <option value="vehicles" name="option">Транспортные средства</option>
+            </select>
+            <input  name="input" id="number" type="number" placeholder="Номер от 1 до 10">
+            </input>
+            <button id="btn">Вперёд!</button>
+       
+        </div>
+
+        <div class="respons-wrap">
+            <div class="response-title"></div>
+            <div class="response"></div>
+        </div>
+
+        <div class="error-message"></div>
+
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+
+        <div class="loader hidden ">
+            <span></span>
+            <span></span>
+        </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
