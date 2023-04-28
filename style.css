@@ -66,6 +66,7 @@ h2 {
     border: none;
     border-bottom: 2px solid white;
     font-size: 20px;
+    border-radius: 0px;
 }
 #btn {
     cursor: pointer;
