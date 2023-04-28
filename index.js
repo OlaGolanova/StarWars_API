@@ -3,7 +3,6 @@
 
 document.addEventListener("DOMContentLoaded", function(event){
 
-
 const selectInput = document.getElementById('select'),
         numberInput = document.getElementById('number'),
         btn = document.getElementById('btn'),
@@ -17,8 +16,6 @@ const selectInput = document.getElementById('select'),
             number: ''
             };
 
-
-
     selectInput.addEventListener('input', function(){
         setData.select = selectInput.value;
         clearResponse();
@@ -30,6 +27,7 @@ const selectInput = document.getElementById('select'),
         clearResponse();
     })
 
+// Очистка инпутов и полей ввода
     function clearResponse() {
         errorMessage.textContent = '';
         response.textContent = '';
@@ -42,7 +40,8 @@ const selectInput = document.getElementById('select'),
         setData.select = '0';
         setData.number = '';
     };
-
+    
+//Реализация лоадера при загрузке данных
     function addLoading(){
         loader.classList.remove("hidden");
     };
@@ -55,7 +54,6 @@ const selectInput = document.getElementById('select'),
         clearResponse();
         fetch( `https://swapi.nomoreparties.co/${setData.select}/${setData.number}`, addLoading())   
         .then(response => {
-            console.log(response);
             removeLoading();
             if (!response.ok) {
                 throw  new Error(response.status  + `. Введены некорректные данные. Объект пустой `);
@@ -64,10 +62,8 @@ const selectInput = document.getElementById('select'),
         })
                
         .then(object  => {
-                console.log(object);
-            
-                let values = Object.values(object);
-                let keys = Object.keys(object);
+                let values = Object.values(object); // Создаю массив из значений объекта object
+                let keys = Object.keys(object);// Создаю массив из ключей объекта object
                 let n = 6;
                 for ( let i = 0; i < n; i++) {
                     response.innerHTML += `${keys[i]}: ${values[i]} <br>`;   
@@ -93,7 +89,6 @@ const selectInput = document.getElementById('select'),
 
             })
            
-    
         .catch(error => {
             console.log(error);
             errorMessage.textContent = error;
@@ -101,10 +96,6 @@ const selectInput = document.getElementById('select'),
             responseTitle.textContent = '';
             clearInput();
         });
-  
-     
-     
     })
-  
 
 })
