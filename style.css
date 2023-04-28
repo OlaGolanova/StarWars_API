@@ -82,7 +82,7 @@ h2 {
     height:100%;
     z-index: -1;
     background-image: url(https://i.postimg.cc/CLpNr4PF/twinkling.png);
-    animation: 3s twinkle infinite;
+    animation: 2s twinkle infinite;
     animation-timing-function: linear;
 }
 
