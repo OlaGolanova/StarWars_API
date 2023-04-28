@@ -52,7 +52,7 @@ const selectInput = document.getElementById('select'),
    
     btn.addEventListener('click', function(event){
         event.preventDefault;
-
+        clearResponse();
         fetch( `https://swapi.nomoreparties.co/${setData.select}/${setData.number}`, addLoading())   
         .then(response => {
             console.log(response);
@@ -68,9 +68,9 @@ const selectInput = document.getElementById('select'),
             
                 let values = Object.values(object);
                 let keys = Object.keys(object);
-                let n = 7;
+                let n = 6;
                 for ( let i = 0; i < n; i++) {
-                    response.innerHTML += ` ${keys[i]}: ${values[i]} <br>`;   
+                    response.innerHTML += `${keys[i]}: ${values[i]} <br>`;   
                 }
                 responseTitle.textContent = setData.select;
                 clearInput();
