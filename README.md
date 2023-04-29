@@ -91,4 +91,6 @@ npm init
 
 8. Изучите документацию к библиотеке moment [https://momentjs.com/](https://momentjs.com/) и скажите, как вывести название дня недели по дате?
 
+let day = moment().format('dddd');// Saturday
+
 
