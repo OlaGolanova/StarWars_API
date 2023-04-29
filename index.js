@@ -66,9 +66,13 @@ const selectInput = document.getElementById('select'),
                 let keys = Object.keys(object);// Создаю массив из ключей объекта object
                 let n = 6;
                 for ( let i = 0; i < n; i++) {
-                    response.innerHTML += `${keys[i]}: ${values[i]} <br>`;   
+                    response.innerHTML += `<span class="keys"> ${keys[i]}:</span> ${values[i]} <br>`; 
                 }
+                let key = document.querySelectorAll('.keys');
+                key.forEach((item) => item.style.color = 'gold' );
+
                 responseTitle.textContent = setData.select;
+                responseTitle.style.color = 'gold';
                 clearInput();
 
              //Если инпут ввода номера будет пустой, то выведется весь перечень имен/названий из данной категории
