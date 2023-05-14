@@ -50,9 +50,10 @@ const selectInput = document.getElementById('select'),
     };
    
     btn.addEventListener('click', function(event){
-        event.preventDefault;
+        event.preventDefault();
         clearResponse();
-        fetch( `https://swapi.nomoreparties.co/${setData.select}/${setData.number}`, addLoading())   
+        fetch( `https://swapi.nomoreparties.co/${setData.select}/${setData.number}`, addLoading )  
+        .then(addLoading() )
         .then(response => {
             removeLoading();
             if (!response.ok) {
